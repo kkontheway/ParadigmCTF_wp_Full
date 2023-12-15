@@ -1,10 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 
 pragma solidity 0.8.16;
-import "./UniswapV2RouterLike.sol";
 
 interface UniswapV2RouterLike {
-    function swapExactTokensForTokens(
+	function swapExactTokensForTokens(
         uint amountIn,
         uint amountOutMin,
         address[] calldata path,
@@ -12,7 +11,7 @@ interface UniswapV2RouterLike {
         uint deadline
     ) external returns (uint[] memory amounts);
 
-    function addLiquidity(
+	function addLiquidity(
         address tokenA,
         address tokenB,
         uint amountADesired,
@@ -26,6 +25,5 @@ interface UniswapV2RouterLike {
 
 interface UniswapV2PairLike {
     function token0() external returns (address);
-
     function token1() external returns (address);
 }
